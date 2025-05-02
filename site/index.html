@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SauveMoi - La santé d'urgence accessible à tous</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'health-green': '#4CAF50',
+                        'wellness-blue': '#2196F3',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Animated Background Elements -->
+    <div class="bubbles-container">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class='bx bx-plus-medical text-health-green text-3xl mr-2'></i>
+                <span class="text-2xl font-bold text-gray-800">SauveMoi</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-health-green transition">Fonctionnalités</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-health-green transition">Témoignages</a>
+                <a href="#about" class="text-gray-600 hover:text-health-green transition">À propos</a>
+                <a href="#contact" class="text-gray-600 hover:text-health-green transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-health-green">
+                    <i class='bx bx-menu text-3xl'></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#features" class="block py-2 text-gray-600 hover:text-health-green">Fonctionnalités</a>
+            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-health-green">Témoignages</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-health-green">À propos</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-health-green">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-20 hero-section">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
+            <div class="floating-icon icon-heart"><i class='bx bxs-heart-circle'></i></div>
+            <div class="floating-icon icon-pulse"><i class='bx bxs-pulse'></i></div>
+            <div class="floating-icon icon-first-aid"><i class='bx bxs-first-aid'></i></div>
+            
+            <div class="md:w-1/2 mb-10 md:mb-0 slide-in-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">La santé d'urgence accessible à tous</h1>
+                <p class="text-xl text-gray-600 mb-8">Surveillance des grossesses à risque et prise en charge rapide des AVC, partout au Bénin.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#download" class="bg-health-green hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center hover-scale pulse-animation">
+                        <i class='bx bxl-android text-2xl mr-2'></i> Android
+                    </a>
+                    <a href="#download" class="bg-wellness-blue hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center hover-scale pulse-animation">
+                        <i class='bx bxl-apple text-2xl mr-2'></i> iOS
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center slide-in-right">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Application SauveMoi sur smartphone" class="w-full max-w-md rounded-xl shadow-2xl floating-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="py-16 problems-section" id="problems">
+        <div class="container mx-auto px-4 relative">
+            <div class="floating-shape shape-circle"></div>
+            <div class="floating-shape shape-square"></div>
+            <div class="floating-shape shape-triangle"></div>
+            
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 glow-text">Problèmes à résoudre</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition slide-up hover-scale" data-delay="100">
+                    <div class="text-health-green text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-female'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Mortalité maternelle</h3>
+                    <p class="text-gray-600">1 femme sur 50 meurt encore à l'accouchement au Bénin, un taux qui pourrait être réduit avec un meilleur suivi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition slide-up hover-scale" data-delay="200">
+                    <div class="text-wellness-blue text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-map-pin'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Déserts médicaux</h3>
+                    <p class="text-gray-600">Peu de gynécologues dans les zones rurales, obligeant les femmes à parcourir de longues distances pour des consultations.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition slide-up hover-scale" data-delay="300">
+                    <div class="text-red-500 text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Urgences AVC</h3>
+                    <p class="text-gray-600">Les AVC nécessitent une intervention rapide, mais l'identification des symptômes et l'accès aux soins sont souvent retardés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 features-section" id="features">
+        <div class="container mx-auto px-4 relative">
+            <div class="floating-icon icon-mobile"><i class='bx bxs-mobile'></i></div>
+            <div class="floating-icon icon-message"><i class='bx bxs-message-rounded-dots'></i></div>
+            
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 glow-text">Fonctionnalités clés</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition slide-in-left" data-delay="100">
+                    <div class="text-wellness-blue text-4xl mb-4 icon-bounce">
+                        <i class='bx bxl-whatsapp'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Chatbot WhatsApp / USSD</h3>
+                    <p class="text-gray-600">Accédez à des conseils médicaux instantanés via WhatsApp ou USSD, même avec une connexion limitée.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition slide-up" data-delay="200">
+                    <div class="text-health-green text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Géolocalisation des services</h3>
+                    <p class="text-gray-600">Trouvez rapidement les cliniques et pharmacies les plus proches en cas d'urgence.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition slide-in-right" data-delay="300">
+                    <div class="text-red-500 text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-message-alt-detail'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Détection d'urgence AVC par SMS</h3>
+                    <p class="text-gray-600">Un système simple par SMS pour identifier les symptômes d'AVC et déclencher une intervention rapide.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition slide-in-left" data-delay="400">
+                    <div class="text-wellness-blue text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-package'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Livraison de médicaments</h3>
+                    <p class="text-gray-600">Recevez vos médicaments essentiels directement chez vous, même dans les zones reculées.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition slide-up" data-delay="500">
+                    <div class="text-health-green text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-donate-heart'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Financement participatif</h3>
+                    <p class="text-gray-600">Campagnes de financement pour aider les patients qui ne peuvent pas payer leurs soins médicaux.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition slide-in-right" data-delay="600">
+                    <div class="text-wellness-blue text-4xl mb-4 icon-bounce">
+                        <i class='bx bx-calendar-check'></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Suivi de grossesse</h3>
+                    <p class="text-gray-600">Calendrier personnalisé et alertes pour les rendez-vous prénataux et les signes de complications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 testimonials-section" id="testimonials">
+        <div class="container mx-auto px-4 relative">
+            <div class="floating-shape shape-wave"></div>
+            <div class="floating-shape shape-dots"></div>
+            
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 glow-text">Témoignages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition slide-in-left" data-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4 pulse-slow">
+                            <img src="https://images.unsplash.com/photo-1507152832244-10d45c7eda57?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Silhouette" class="w-full h-full object-cover opacity-70">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Aïcha K.</h4>
+                            <p class="text-sm text-gray-500">Cotonou</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Grâce à SauveMoi, j'ai pu être suivie pendant ma grossesse à risque sans avoir à me déplacer chaque semaine à l'hôpital qui est à 30km de chez moi."</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition slide-up" data-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4 pulse-slow">
+                            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Silhouette" class="w-full h-full object-cover opacity-70">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Pascal M.</h4>
+                            <p class="text-sm text-gray-500">Parakou</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"L'application a détecté les symptômes d'AVC de mon père et nous a guidés pour obtenir une aide médicale rapide. Les médecins disent que cette rapidité lui a sauvé la vie."</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition slide-in-right" data-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4 pulse-slow">
+                            <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Silhouette" class="w-full h-full object-cover opacity-70">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Nadège T.</h4>
+                            <p class="text-sm text-gray-500">Porto-Novo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Je vis dans un village éloigné et SauveMoi m'a permis de recevoir mes médicaments pour l'hypertension directement chez moi. C'est un vrai changement dans ma vie."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 about-section" id="about">
+        <div class="container mx-auto px-4 relative">
+            <div class="floating-icon icon-team"><i class='bx bxs-group'></i></div>
+            <div class="floating-icon icon-certificate"><i class='bx bxs-certification'></i></div>
+            
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 glow-text">À propos du projet</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2 slide-in-left">
+                    <p class="text-gray-600 mb-6">SauveMoi est né d'une vision simple : rendre les soins de santé accessibles à tous les Béninois, où qu'ils soient. Notre équipe pluridisciplinaire combine expertise médicale et technologique pour créer des solutions adaptées aux réalités locales.</p>
+                    <p class="text-gray-600 mb-6">Nous travaillons en étroite collaboration avec les professionnels de santé locaux, les communautés et les autorités sanitaires pour garantir que nos services répondent aux besoins réels de la population.</p>
+                    <div class="flex flex-wrap items-center gap-4 mt-8">
+                        <p class="font-semibold text-gray-700 mr-4">Nos partenaires :</p>
+                        <div class="bg-white p-3 rounded-lg shadow-sm hover-scale partner-logo">
+                            <span class="text-xl font-bold text-yellow-500">MTN</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm hover-scale partner-logo">
+                            <span class="text-xl font-bold text-red-500">Zipline</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm hover-scale partner-logo">
+                            <span class="text-xl font-bold text-health-green">Clinique Saint-Jean</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm hover-scale partner-logo">
+                            <span class="text-xl font-bold text-wellness-blue">Hôpital de Zone</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 slide-in-right" data-delay="300">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe médicale" class="w-full rounded-xl shadow-lg floating-image-slow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 cta-section" id="download">
+        <div class="container mx-auto px-4 text-center relative">
+            <div class="floating-shape shape-circle-small"></div>
+            <div class="floating-shape shape-square-small"></div>
+            <div class="floating-shape shape-triangle-small"></div>
+            
+            <h2 class="text-3xl font-bold text-white mb-6 glow-text-white">Téléchargez SauveMoi dès maintenant</h2>
+            <p class="text-white text-xl mb-10 max-w-2xl mx-auto">Rejoignez les milliers de Béninois qui ont déjà amélioré leur accès aux soins de santé grâce à notre application.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg transition flex items-center hover-scale pulse-animation">
+                    <i class='bx bxl-android text-2xl mr-2 text-green-600'></i> Télécharger pour Android
+                </a>
+                <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg transition flex items-center hover-scale pulse-animation">
+                    <i class='bx bxl-apple text-2xl mr-2'></i> Télécharger pour iOS
+                </a>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="bg-white p-4 rounded-lg shadow-lg rotate-animation">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://sauvemoi.bj" alt="QR Code SauveMoi" class="w-36 h-36">
+                </div>
+                <div class="flex flex-col items-start">
+                    <a href="https://wa.me/22900000000" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg transition flex items-center mb-4 hover-scale slide-in-right" data-delay="100">
+                        <i class='bx bxl-whatsapp text-2xl mr-2 text-green-500'></i> Nous contacter sur WhatsApp
+                    </a>
+                    <a href="mailto:contact@sauvemoi.bj" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg transition flex items-center hover-scale slide-in-right" data-delay="200">
+                        <i class='bx bx-envelope text-2xl mr-2 text-blue-500'></i> contact@sauvemoi.bj
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10" id="contact">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class='bx bx-plus-medical text-health-green text-3xl mr-2'></i>
+                        <span class="text-2xl font-bold">SauveMoi</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md">La santé d'urgence accessible à tous, partout au Bénin. Notre mission est de sauver des vies grâce à la technologie.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition">Fonctionnalités</a></li>
+                            <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Témoignages</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Nous contacter</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class='bx bx-envelope mr-2'></i> <a href="mailto:contact@sauvemoi.bj" class="text-gray-400 hover:text-white transition">contact@sauvemoi.bj</a></li>
+                            <li class="flex items-center"><i class='bx bx-phone mr-2'></i> <a href="tel:+22900000000" class="text-gray-400 hover:text-white transition">+229 00 00 00 00</a></li>
+                            <li class="flex items-center"><i class='bx bxl-whatsapp mr-2'></i> <a href="https://wa.me/22900000000" class="text-gray-400 hover:text-white transition">WhatsApp</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Suivez-nous</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class='bx bxl-facebook text-2xl'></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class='bx bxl-twitter text-2xl'></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class='bx bxl-instagram text-2xl'></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class='bx bxl-linkedin text-2xl'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 SauveMoi. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
